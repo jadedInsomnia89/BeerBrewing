@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IFSC 1310 - Prototype</title>
+        <meta charset="UTF-8" />  <!-- This line specifies the character encoding as UTF-8 -->
+        <meta name="description" content="This is my Prototype HTML Document Assignment for IFSC 1310.  The website will contain info about brewing beer." />  <!-- this is a description of what my website is about -->
+        <meta name="author" content="Jade Crumley" />  <!-- this is the author of the website -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" type="text/css" href="../assets/css/brewing.css"/>
+        <script src="../assets/js/modalimage.js"></script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <header role="banner" class="primary">
+                <h1 id="top"><a href="index.html">Brewing Beer</a></h1>
+                <nav id="topnav" role="navigation">
+                    <ul>
+                        <li> <a href="recipes.html">Beer Recipes</a> </li>
+                        <li> <a href="glossary.html">Glossary</a> </li> <!-- don't have about page/content yet -->
+                        <li> <a href="contact.html">Contact</a> </li>
+                    </ul>
+                </nav> 
+            </header>
+            
+            <article id="brew-basics" class="container">
+                <h2>Beer Brewing Basics</h2>
+                
+                <section id="intro" class="container">
+                    <h3>Introduction</h3>
+                    
+                    <blockquote>
+                        &#x0022; Beer is proof that God loves us and wants us to be happy. &#x0022;
+                        <cite>&#x2013; Benjamin Franklin</cite>
+                    </blockquote>
+                    
+                    <p>
+                        Hello, there.  I'm glad you decided to give home brewing a chance!  There is <strong>a lot</strong> to know when brewing beer, and many variables come into play 
+                        whenever you give home brewing a go.  However, this article will focus on the <em>big</em> picture and focus on the primary elements to brewing your first beer.  
+                        There are five basic steps to brewing beer, and the article will be organized accordingly:
+                    </p>
+                    
+                </section> <!-- intro -->
+                
+                <nav id="stepsnav" role=navigation>
+                    <div class=container>
+                    <div>
+                        <img src="../assets/img/brewingpics/supplies.jpg" alt="picture of beer brewing supplies" /><a href="#supplies">Gathering the Required Supplies &#xbb;</a>
+                    </div>
+                    <div>
+                        <img src="../assets/img/brewingpics/cleaning.jpg" alt="picture of equipment being cleaned" /><a href="#cleaning">Cleaning and Sanitizing Equipment &#xbb;</a>
+                    </div>
+                    <div>
+                        <img src="../assets/img/brewingpics/brewing.jpg" alt="picture of wort being brewed" /><a href="#brewing">Brewing &#xbb;</a>
+                    </div>
+                    <div>
+                        <img src="../assets/img/brewingpics/fermentation.jpg" alt="picture of beer stored in a bucket undergoing fermentation" /><a href="#fermentation">Fermentation &#xbb;</a>
+                    </div>
+                    <div>
+                        <img src="../assets/img/brewingpics/bottling.jpg" alt="picture of beer being bottled" /><a href="#bottling">Bottling &#xbb;</a>
+                    </div>
+                    </div>
+                    
+                </nav>
+                
+                <section id="supplies" class="container">
+                    <h3><a href="#stepsnav">&#xab; Gathering the Required Supplies</a></h3>
+                    <p> You can't brew beer without the proper equipment and ingredients!  Fortunately, getting what you need is much easier nowadays.  I would recommend checking out your local brew supply store or the Internet for home brew starter kits.  They will have almost everything you need to get started.  The only thing I had to buy separately was a pot big enough to boil the ingredients in as well as a racking cane &#x0028;nice to have, but not necessary&#x0029;.  Of course, you will have to buy bottles separately &#x0028;or collect empties as you drink store bought beer&#x0029; and the ingredients.  However, you can also buy ingredient kits.  The table below gives you an itemized list of supplies you will need.  Since this is an introduction to beer brewing, we will discuss beer brewing using an ingredient kit.  The home brew starter kit and ingredient kit I used will be shown below&#x003A;
+                    </p>
+                    
+                <div class="row">
+                    <div class="column">
+                    <img src="../assets/img/brewingpics/starterkitfront.jpg" alt="Front of Starter Kit Box" onclick="openModal();currentSlide(1)" class="hover-shadow"/>
+                    </div>
+                    
+                    <div class="column">
+                        <img src="../assets/img/brewingpics/starterkitside.jpg" alt="Side of Starter Kit Box" onclick="openModal();currentSlide(2)" class="hover-shadow"/>
+                    </div>
+                    
+                    <div class="column">
+                        <img src="../assets/img/brewingpics/ingredientkit.jpg" alt="Ingredient Kit Box" onclick="openModal();currentSlide(3)" class="hover-shadow"/>
+                    </div>
+                </div> <!-- row -->
+                
+                <!-- The Modal/Lightbox -->
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
+                
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="../assets/img/brewingpics/starterkitfront.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="../assets/img/brewingpics/starterkitside.jpg" style="width:100%">
+                    </div>
+                
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="../assets/img/brewingpics/ingredientkit.jpg" style="width:100%">
+                    </div>
+                
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                      <img class="demo" src="../assets/img/brewingpics/starterkitfront.jpg" onclick="currentSlide(1)" alt="Front of Starter Kit Box">
+                    </div>
+                
+                    <div class="column">
+                      <img class="demo" src="../assets/img/brewingpics/starterkitside.jpg" onclick="currentSlide(2)" alt="Side of Starter Kit Box">
+                    </div>
+                
+                    <div class="column">
+                      <img class="demo" src="../assets/img/brewingpics/ingredientkit.jpg" onclick="currentSlide(3)" alt="Ingredient Kit Box">
+                    </div>
+                
+                  </div>
+                </div>
+                    
+                    <table>
+                        <caption>Equipment</caption>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Size/Amount</th>
+                          <th scope="col">Typical Price</th>
+                          <th scope="col">Comments</th>
+                        </tr>
+                        <tr>
+                          <td>Boiling Pot</td>
+                          <td>6 gallons</td>
+                          <td>$25.00</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                            <td>Stirring Paddle</td>
+                            <td>1</td>
+                            <td>$2.50</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Measuring Cup</td>
+                            <td>1 - 4 cups</td>
+                            <td>$4.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                          <td>Fermenter</td>
+                          <td>6 gallons</td>
+                          <td>$5.00</td>
+                          <td>will be using a fermentation bucket</td>
+                        </tr>
+                        <tr>
+                          <td>Airlock</td>
+                          <td>1</td>
+                          <td>$2.00</td>
+                          <td>will be using S-type airlock</td>
+                        </tr>
+                        <tr>
+                            <td>Siphon</td>
+                            <td>1</td>
+                            <td>$10.00</td>
+                            <td>with racking cane and bottle filler</td>
+                        </tr>
+                        <tr>
+                            <td>Bottling Bucket</td>
+                            <td>6 gallons</td>
+                            <td>$7.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Bottle Capper</td>
+                            <td>1</td>
+                            <td>$10.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Bottles</td>
+                            <td>60 - 12 oz</td>
+                            <td>$15.00</td>
+                            <td>could collect empties and clean instead</td>
+                        </tr>
+                        <tr>
+                            <td>Bottle Brush</td>
+                            <td>1</td>
+                            <td>$1.50</td>
+                            <td>for cleaning used bottles</td>
+                        </tr>
+                        <tr>
+                            <td>Bottle Caps</td>
+                            <td>60</td>
+                            <td>$8.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Thermometer</td>
+                            <td>1</td>
+                            <td>$3.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Hydrometer</td>
+                            <td>1</td>
+                            <td>$5.00</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Bag of Ice</td>
+                            <td>2-3</td>
+                            <td>$5.00</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section> <!-- supplies -->
+                
+                <section id="cleaning" class="container">
+                    <h3><a href="#stepsnav">&#xab; Cleaning and Sanitizing Equipment</a></h3>
+                    <p>
+                        This is where I'll discuss proper washing, rinsing, and sanitizing of the brewing equipment.
+                    </p>
+                </section> <!-- cleaning -->
+                
+                <section id="brewing" class="container">
+                    <h3><a href="#stepsnav">&#xab; Brewing</a></h3>
+                    <p>
+                        This is where I'll discuss the brewing process.
+                    </p>
+                        <blockquote cite="http://howtobrew.com/book/introduction">
+                            &#x0022; Oh, one more thing, I should mention 
+                            that Extract Brewing should not be viewed as inferior to brewing with grain, it 
+                            is merely easier. It takes up less space and uses less equipment. You can brew 
+                            national competition winning beers using extracts. The reason I moved on to 
+                            Partial Mashes and then to All-Grain was because brewing is FUN. These methods 
+                            really let you roll up your sleeves, fire up the kettles and be the inventor. You 
+                            can let the mad-scientist in you come forth, you can combine different malts and 
+                            hops at will, defying conventions and conservatives, raising your creation up to 
+                            the storm and calling down the lightening...Hah hah HAH.... &#x0022;
+                            <cite>From&#x3A; How To Brew &#x2013; By John Palmer</cite>
+                        </blockquote> 
+                </section> <!-- brewing -->
+                
+                <section id="fermentation" class="container">
+                    <h3><a href="#stepsnav">&#xab; Fermentation</a></h3>
+                    <p>
+                        This is where I'll discuss the fermentation process.
+                    </p>
+                </section> <!--fermentation -->
+                
+                <section id="bottling" class="container">
+                    <h3><a href="#stepsnav">&#xab; Bottling</a></h3>
+                    <p>
+                        This is where I'll discuss the bottling process.
+                    </p>
+                </section> <!--bottling -->
+                
+            </article>  <!-- brew-basics -->
+            
+            <footer id="primaryfooter" role="contentinfo">
+                <nav id="bottomnav" role="navigation">
+                    <ul>
+                        <li> <a href="index.html">Home</a> </li>
+                        <li> <a href="recipes.html">Beer Recipes</a> </li>
+                        <li> <a href="glossary.html">Glossary</a> </li> <!-- don't have about page/content yet -->
+                        <li> <a href="contact.html">Contact</a> </li>
+                    </ul>
+                </nav>
+                
+                <h6>©2018 Jade Crumley</h6>
+                <h6><a href="mailto:jcrumley@ualr.edu">Website issues? Email Me  &#xbb;</a></h6>
+                <h6><a href="https://ualr.edu/">UALR Website  &#xbb;</a></h6>
+            </footer> 
+            
+        </div> <!-- container -->
+    </body>
+    
+</html>
